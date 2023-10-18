@@ -87,16 +87,13 @@ class _LoginScreenState extends State<LoginScreen> {
                       responseMap['firstName'],
                       responseMap['lastName'],
                     );
-                    Future.delayed(
-                      const Duration(seconds: 2),
-                      () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => ProfileScreen(
-                            firstName: responseMap['firstName'],
-                            lastName: responseMap['lastName'],
-                            email: responseMap['email'],
-                          ),
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ProfileScreen(
+                          firstName: responseMap['firstName'],
+                          lastName: responseMap['lastName'],
+                          email: responseMap['email'],
                         ),
                       ),
                     );
